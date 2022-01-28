@@ -15,8 +15,10 @@ public class TokenManager {
     private static Instant expiry_time;
 
 
-    // synchronized keyword will make method to wait, till current thread releases the method
-    // inorder to avoid calling this method multiple times.
+     /*
+     synchronized keyword will make method to wait, till current thread releases the method
+     inorder to avoid calling this method multiple times.
+     */
     public synchronized static String getToken() {
         try {
             if (access_token == null || Instant.now().isAfter(expiry_time)) {

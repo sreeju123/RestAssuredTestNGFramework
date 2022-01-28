@@ -12,7 +12,8 @@ import lombok.Setter;
 import lombok.extern.jackson.Jacksonized;
 
 
-@Getter @Setter
+@Getter
+@Setter
 @Jacksonized
 @Builder // when we use builder, we also need to mention Jacksonized to identify json
 @JsonInclude(JsonInclude.Include.NON_NULL)
